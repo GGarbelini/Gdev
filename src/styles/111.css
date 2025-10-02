@@ -43,7 +43,7 @@
   border: 1px solid #3dff8b;
 }
 
-/* Estilos para o grid original (mantidos para compatibilidade) */
+/* Estilos originais para grid (mantidos para compatibilidade) */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -55,12 +55,12 @@
 .carousel-container {
   position: relative;
   margin-top: 2rem;
-  padding: 0 20px;
+  padding: 0 20;
   width: 100%;
 }
 
 .carousel-item {
-  padding: 0 10px;
+  padding: 0 15px;
   height: 500px;
 }
 
@@ -117,7 +117,7 @@
   opacity: 1;
 }
 
-/* Estilos para os cards de projeto */
+/* Mantendo seus estilos originais para os cards */
 .project-card {
   background: #121212;
   border-radius: 16px;
@@ -177,12 +177,6 @@
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
   flex: 1;
-  /* Limitar a descrição a 4 linhas */
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
 }
 
 .project-link {
@@ -196,7 +190,6 @@
   border-radius: 8px;
   transition: all 0.3s ease;
   text-decoration: none;
-  align-self: flex-start;
 }
 
 .project-link:hover {
@@ -229,59 +222,9 @@
   height: 100%;
 }
 
-/* Estilos específicos para dispositivos móveis */
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .carousel-item {
-    height: 450px;
-  }
-  
-  .slick-slide {
-    width: 100% !important;
-  }
-  
-  .carousel-arrow {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .prev-arrow {
-    left: 5px;
-  }
-  
-  .next-arrow {
-    right: 5px;
-  }
-  
-  /* Forçar exibição de apenas um slide em dispositivos móveis */
-  .slick-track {
-    display: flex !important;
-  }
-  
-  .slick-list {
-    overflow: hidden !important;
-  }
-  
-  /* Ajustar altura da imagem em dispositivos móveis */
-  .project-image {
-    height: 180px;
-  }
-  
-  /* Limitar descrição a 2 linhas em dispositivos móveis */
-  .project-description {
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    
-  }
-}
-
-/* Ajustes para telas médias (tablets) */
-@media (min-width: 769px) and (max-width: 1200px) {
-  .carousel-item {
-    height: 480px;
   }
   
   .carousel-arrow {
@@ -289,20 +232,28 @@
     height: 35px;
   }
   
+  .carousel-arrow svg {
+    font-size: 20px;
+  }
+  
   .prev-arrow {
-    left: 0px;
+    left: -10px;
   }
   
   .next-arrow {
-    right: 0px;
+    right: -10px;
   }
-}
 
-/* Ajustes para telas muito grandes */
-@media (min-width: 1400px) {
-  .carousel-container {
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+ 
+  .slick-slider .slick-slide {
+    width: 100% !important;
+  }
+  
+  .slick-slider .slick-track {
+    display: flex !important;
+  }
+  .slick-slider .slick-list {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }

@@ -174,7 +174,7 @@ const AboutSection = () => {
   const stats = [
     { number: '30+', label: 'Projetos Concluídos' },
     { number: '30+', label: 'Clientes Satisfeitos' },
-    { number: '1+', label: 'Anos de Experiência' }
+    //{ number: '1+', label: 'Anos de Experiência' }
   ];
   
   const containerVariants = {
